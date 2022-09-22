@@ -4,15 +4,15 @@ A collection of Python scripts that achieve three things:
 
 1) Sample random sentences from the Sejong corpus of written Korean (sejongExtract.py, sejongRandomize.py, sejongWmodern_preprocessing.py)
 
-The entire corpus is 400MB of text, so it was practical to sample at the time I wrote this code. 
+   The entire corpus is 400MB of text, so it was practical to sample at the time I wrote this code. 
 
 2) Build a bigram probability model and save the model for later use (cfdLearner.py)
 
-I used the MeCab morphological tagger by KoNLPy, and NLTK for building the model. The resultant model is saved as a Python pickle object using Python's native package "pickle".
+   I used the MeCab morphological tagger by KoNLPy, and NLTK for building the model. The resultant model is saved as a Python pickle object using Python's native package "pickle".
 
 3) Given a word, generate a sentence that begins with that word (SentenceMaker.py)
 
-Basically, if you give SentenceMaker.py a word that it knows, it will generate a sequence of bigrams based on the bigram model from Step 2 until it reaches an end-of-sentence marker. The results are not great but they are entertaining -- goes on to show that you need more than linear adjacency information at the syntax level I guess...
+   Basically, if you give SentenceMaker.py a word that it knows, it will generate a sequence of bigrams based on the bigram model from Step 2 until it reaches an end-of-sentence marker. The results are not great but they are entertaining -- goes on to show that you need more than linear adjacency information at the syntax level I guess...
 
 
 ***About the Sejong Corpus***
